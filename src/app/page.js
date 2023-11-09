@@ -6,10 +6,10 @@ import './globals.css'
 
 export default function Home() {
 
-  const [angka, setAngka] = useState(0)
+  const [bravo, setBravo] = useState(0)
   const [nama, setNama] = useState('aida canti')
-  const clickHandler = () => {
-    setAngka(angka + 1)
+  const handlerBravo = () => {
+    setBravo(bravo + 1)
 
   }
 
@@ -33,11 +33,11 @@ export default function Home() {
           <h1>{nama}</h1>
           <div className="bio-nim">
             <p>D121211037</p>
-            <p>Bravo {angka}, going dark</p>
+            <p>Bravo {bravo}, going dark</p>
           </div>
         </div>
       </div>
-      <div className="cta" onClick={clickHandler}>
+      <div className="cta" onClick={handlerBravo}>
         <button>
           <p>Halo!</p>
         </button>
