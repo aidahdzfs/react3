@@ -1,7 +1,23 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import './globals.css'
 
 export default function Home() {
+
+  const [angka, setAngka] = useState(0)
+  const [nama, setNama] = useState('aida canti')
+  const clickHandler = () => {
+    setAngka(angka + 1)
+
+  }
+
+  const handlerTambahNama = () => {
+    setNama('aida canti banget')
+
+  }
+
   return (
     <div className='body'>
       <div className="banner-container">
@@ -14,16 +30,21 @@ export default function Home() {
           />
         </div>
         <div className="nama">
-          <h1>Aidah Dzulfadilah Suwardi</h1>
+          <h1>{nama}</h1>
           <div className="bio-nim">
             <p>D121211037</p>
-            <p>Bravo 6, going dark</p>
+            <p>Bravo {angka}, going dark</p>
           </div>
         </div>
       </div>
-      <div className="cta">
+      <div className="cta" onClick={clickHandler}>
         <button>
           <p>Halo!</p>
+        </button>
+      </div>
+      <div className="cta" onClick={handlerTambahNama}>
+        <button>
+          <p>ganti nama</p>
         </button>
       </div>
     </div>
